@@ -1,0 +1,149 @@
+{% extends "index.html" %}
+{% block content %}
+
+<section id="contact" class="contact">
+    <center>
+
+    {% if prediction %}
+        <center>
+          <h2 style="color: green;">Prediction: {{prediction}}</h2><br>
+        </center>
+    {% endif %}
+
+    <div class="section-title">
+        <h2>Prediction</h2>
+    </div>
+    
+    <div class="col-8">
+        <form action="{{url_for('prediction')}}" method="post" role="form" class="info">
+        
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Source Port" step="0.01" placeholder="Source Port" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Destination Port" step="0.01" placeholder="Destination Port" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Protocol" step="0.01" placeholder="Protocol" required>
+                    </div><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Flow Duration" step="0.01" placeholder="Flow Duration" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Flow Bytes/s" step="0.01" placeholder="Flow Bytes/s" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Flow Packets/s" step="0.01" placeholder="Flow Packets/s" required>
+                    </div><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Flow IAT Mean" step="0.01" placeholder="Flow IAT Mean" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Flow IAT Std" step="0.01" placeholder="Flow IAT Std" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Flow IAT Max" step="0.01" placeholder="Flow IAT Max" required>
+                    </div><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Flow IAT Min" step="0.01" placeholder="Flow IAT Min" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Fwd IAT Mean" step="0.01" placeholder="Fwd IAT Mean" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Fwd IAT Std" step="0.01" placeholder="Fwd IAT Std" required>
+                    </div><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Fwd IAT Max" step="0.01" placeholder="Fwd IAT Max" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Fwd IAT Min" step="0.01" placeholder="Fwd IAT Min" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Bwd IAT Mean" step="0.01" placeholder="Bwd IAT Mean" required>
+                    </div><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Bwd IAT Std" step="0.01" placeholder="Bwd IAT Std" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Bwd IAT Max" step="0.01" placeholder="Bwd IAT Max" required>
+                    </div><br>
+                </div>
+
+                <div class="col">
+                    <div class="form-group mt-3">
+                        <input style="height: 50px;" type="number" class="form-control" name="Bwd IAT Min" step="0.01" placeholder="Bwd IAT Min" required>
+                    </div><br>
+                </div>
+            </div>
+            
+        <div class="text-center">
+            <button style="height: 50px; width: 300px;" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
+    </div>
+    </center>
+</section>
+
+
+{% endblock %}
